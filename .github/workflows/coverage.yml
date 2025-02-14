@@ -1,0 +1,34 @@
+name: coverage
+
+on:
+  push:
+    branches:
+      - 'releases/**'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-test:
+    name: coverage
+    runs-on: ubuntu-22.04
+    env:
+      CLUSTER_LOGS_PATH: cluster-logs
+    steps:
+      - name: Check out revision
+        uses: actions/checkout@v4
+
+      - name: Set up Bazel
+        uses: world-federation-of-advertisers/actions/setup-bazel@v2
+
+      - name: Build
+        run: >
+          bazel build --worker_quit_after_build
+          //...
+
+      - name: Run tests
+        id: run-tests
+        run: bazel coverage --instrumentation_filter="//src/main/kotlin/org/...,-@.*"  --nocache_test_results --combined_report=lcov //src/test/...
+
