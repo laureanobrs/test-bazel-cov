@@ -1,0 +1,31 @@
+name: test-clang
+
+on:
+  push:
+    branches:
+      - 'releases/**'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-test:
+    name: test-clang
+    runs-on: ubuntu-22.04
+    env:
+      CLUSTER_LOGS_PATH: cluster-logs
+    steps:
+      - name: Check out revision
+        uses: actions/checkout@v4
+
+      - name: Set up Bazel
+        uses: world-federation-of-advertisers/actions/setup-bazel@v2
+
+      - name: Build
+        run: |
+          echo "int main() { }" >| hello.c
+          clang -v --coverage hello.c -o hello
+
+
