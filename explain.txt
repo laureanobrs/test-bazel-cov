@@ -1,0 +1,60 @@
+Build options: --enable_bzlmod --registry=file:///home/lceschini/tmp/registry --registry=https://raw.githubusercontent.com/world-federation-of-advertisers/bazel-registry/main --registry=https://bcr.bazel.build --repo_env='CC=clang' --cxxopt='-std=c++17' --java_runtime_version=remotejdk_17 --java_language_version=11 --noremote_upload_local_results --remote_download_outputs=minimal --remote_timeout=3600 --lockfile_mode=off --verbose_failures --sandbox_debug --subcommands=1 --explain=explain.txt --verbose_explanations
+Executing action 'BazelWorkspaceStatusAction stable-status.txt': unconditional execution is requested.
+Executing action 'Expanding template external/rules_kotlin~/src/main/kotlin/build [for tool]': no entry in the cache (action is new).
+Executing action 'Expanding template src/test/kotlin/sample/number_evaluator_test': no entry in the cache (action is new).
+Executing action 'Expanding template external/rules_jvm_external~/private/tools/java/com/github/bazelbuild/rules_jvm_external/jar/AddJarManifestEntry [for tool]': no entry in the cache (action is new).
+Executing action 'Executing genrule @@rules_jvm_external~~maven~maven//:org_jetbrains_kotlin_kotlin_reflect_2_1_0_extension': no entry in the cache (action is new).
+Executing action 'Expanding template external/rules_kotlin~/src/main/kotlin/jdeps_merger [for tool]': no entry in the cache (action is new).
+Executing action 'Copying file tsconfig.json': no entry in the cache (action is new).
+Executing action 'Creating source manifest for //src/test/kotlin/sample:number_evaluator_test': no entry in the cache (action is new).
+Executing action 'Creating runfiles tree bazel-out/k8-fastbuild/bin/src/test/kotlin/sample/number_evaluator_test.runfiles': no entry in the cache (action is new).
+Executing action 'Writing repo mapping manifest for //src/test/kotlin/sample:number_evaluator_test': no entry in the cache (action is new).
+Executing action 'Executing genrule @@rules_jvm_external~~maven~maven//:org_jetbrains_kotlin_kotlin_stdlib_2_1_0_extension': no entry in the cache (action is new).
+Executing action 'Executing genrule @@rules_jvm_external~~maven~maven//:org_jetbrains_kotlin_kotlin_test_2_1_0_extension': no entry in the cache (action is new).
+Executing action 'Executing genrule @@rules_jvm_external~~maven~maven//:org_hamcrest_hamcrest_core_1_3_extension': no entry in the cache (action is new).
+Executing action 'Creating source manifest for @@rules_kotlin~//src/main/kotlin:build [for tool]': no entry in the cache (action is new).
+Executing action 'Executing genrule @@rules_jvm_external~~maven~maven//:junit_junit_4_13_2_extension': no entry in the cache (action is new).
+Executing action 'Writing repo mapping manifest for @@rules_jvm_external~//private/tools/java/com/github/bazelbuild/rules_jvm_external/jar:AddJarManifestEntry [for tool]': no entry in the cache (action is new).
+Executing action 'Creating source manifest for @@rules_jvm_external~//private/tools/java/com/github/bazelbuild/rules_jvm_external/jar:AddJarManifestEntry [for tool]': no entry in the cache (action is new).
+Executing action 'Creating runfiles tree bazel-out/k8-opt-exec-ST-d57f47055a04/bin/external/rules_jvm_external~/private/tools/java/com/github/bazelbuild/rules_jvm_external/jar/AddJarManifestEntry.runfiles [for tool]': no entry in the cache (action is new).
+Executing action 'Writing repo mapping manifest for @@rules_kotlin~//src/main/kotlin:build [for tool]': no entry in the cache (action is new).
+Executing action 'Creating runfiles tree bazel-out/k8-opt-exec-ST-d57f47055a04/bin/external/rules_kotlin~/src/main/kotlin/build.runfiles [for tool]': no entry in the cache (action is new).
+Executing action 'Executing genrule @@rules_jvm_external~~maven~maven//:org_jetbrains_annotations_23_0_0_extension': no entry in the cache (action is new).
+Executing action 'Expanding template src/test/kotlin/sample/number_evaluator_test_2': no entry in the cache (action is new).
+Executing action 'Writing repo mapping manifest for //src/test/kotlin/sample:number_evaluator_test_2': no entry in the cache (action is new).
+Executing action 'Creating source manifest for @@rules_kotlin~//src/main/kotlin:jdeps_merger [for tool]': no entry in the cache (action is new).
+Executing action 'Creating source manifest for //src/test/kotlin/sample:number_evaluator_test_2': no entry in the cache (action is new).
+Executing action 'Creating runfiles tree bazel-out/k8-opt-exec-ST-d57f47055a04/bin/external/rules_kotlin~/src/main/kotlin/jdeps_merger.runfiles [for tool]': no entry in the cache (action is new).
+Executing action 'Creating runfiles tree bazel-out/k8-fastbuild/bin/src/test/kotlin/sample/number_evaluator_test_2.runfiles': no entry in the cache (action is new).
+Executing action 'Writing repo mapping manifest for @@rules_kotlin~//src/main/kotlin:jdeps_merger [for tool]': no entry in the cache (action is new).
+Executing action 'JavaToolchainCompileClasses external/rules_java~/toolchains/platformclasspath_classes [for tool]': no entry in the cache (action is new).
+Executing action 'JavaToolchainCompileBootClasspath external/rules_java~/toolchains/platformclasspath.jar [for tool]': no entry in the cache (action is new).
+Executing action 'Compiling Java headers external/rules_jvm_external~/private/tools/java/com/github/bazelbuild/rules_jvm_external/zip/libzip-hjar.jar (1 source file) [for tool]': no entry in the cache (action is new).
+Executing action 'Compiling Java headers external/rules_jvm_external~/private/tools/java/com/github/bazelbuild/rules_jvm_external/librules_jvm_external-hjar.jar (3 source files) [for tool]': no entry in the cache (action is new).
+Executing action 'Building external/rules_kotlin~/src/main/kotlin/jdeps_merger.jar () [for tool]': no entry in the cache (action is new).
+Executing action 'Building external/rules_kotlin~/src/main/kotlin/build.jar () [for tool]': no entry in the cache (action is new).
+Executing action 'Building external/rules_jvm_external~/private/tools/java/com/github/bazelbuild/rules_jvm_external/librules_jvm_external.jar (3 source files) [for tool]': no entry in the cache (action is new).
+Executing action 'Building external/rules_jvm_external~/private/tools/java/com/github/bazelbuild/rules_jvm_external/zip/libzip.jar (1 source file) [for tool]': no entry in the cache (action is new).
+Executing action 'Building external/rules_jvm_external~/private/tools/java/com/github/bazelbuild/rules_jvm_external/jar/AddJarManifestEntry.jar (1 source file) [for tool]': no entry in the cache (action is new).
+Executing action 'Stamping the manifest of @@rules_jvm_external~~maven~maven//:junit_junit': no entry in the cache (action is new).
+Executing action 'Stamping the manifest of @@rules_jvm_external~~maven~maven//:org_jetbrains_kotlin_kotlin_test': no entry in the cache (action is new).
+Executing action 'Stamping the manifest of @@rules_jvm_external~~maven~maven//:org_jetbrains_kotlin_kotlin_stdlib': no entry in the cache (action is new).
+Executing action 'Stamping the manifest of @@rules_jvm_external~~maven~maven//:org_jetbrains_kotlin_kotlin_reflect': no entry in the cache (action is new).
+Executing action 'Stamping the manifest of @@rules_jvm_external~~maven~maven//:org_hamcrest_hamcrest_core': no entry in the cache (action is new).
+Executing action 'Stamping the manifest of @@rules_jvm_external~~maven~maven//:org_jetbrains_annotations': no entry in the cache (action is new).
+Executing action 'Creating compile jar for @@rules_jvm_external~~maven~maven//:org_jetbrains_annotations': no entry in the cache (action is new).
+Executing action 'Creating compile jar for @@rules_jvm_external~~maven~maven//:org_hamcrest_hamcrest_core': no entry in the cache (action is new).
+Executing action 'Creating compile jar for @@rules_jvm_external~~maven~maven//:org_jetbrains_kotlin_kotlin_test': no entry in the cache (action is new).
+Executing action 'Creating compile jar for @@rules_jvm_external~~maven~maven//:junit_junit': no entry in the cache (action is new).
+Executing action 'Creating compile jar for @@rules_jvm_external~~maven~maven//:org_jetbrains_kotlin_kotlin_stdlib': no entry in the cache (action is new).
+Executing action 'Creating compile jar for @@rules_jvm_external~~maven~maven//:org_jetbrains_kotlin_kotlin_reflect': no entry in the cache (action is new).
+Executing action 'KotlinCompile //src/main/kotlin/sample:number_evaluator_lib { kt: 3, java: 0, srcjars: 0 } for k8': no entry in the cache (action is new).
+Executing action 'JdepsMerge //src/main/kotlin/sample:number_evaluator_lib { jdeps: 1 }': no entry in the cache (action is new).
+Executing action 'Merging Kotlin output jar //src/main/kotlin/sample:number_evaluator_lib (Runtime) from 1 inputs': no entry in the cache (action is new).
+Executing action 'Merging Kotlin output jar //src/main/kotlin/sample:number_evaluator_lib (Abi) from 1 inputs': no entry in the cache (action is new).
+Executing action 'KotlinCompile //src/test/kotlin/sample:number_evaluator_test_2 { kt: 1, java: 0, srcjars: 0 } for k8': no entry in the cache (action is new).
+Executing action 'KotlinCompile //src/test/kotlin/sample:number_evaluator_test { kt: 1, java: 0, srcjars: 0 } for k8': no entry in the cache (action is new).
+Executing action 'Merging Kotlin output jar //src/test/kotlin/sample:number_evaluator_test_2 (Runtime) from 1 inputs': no entry in the cache (action is new).
+Executing action 'JdepsMerge //src/test/kotlin/sample:number_evaluator_test_2 { jdeps: 1 }': no entry in the cache (action is new).
+Executing action 'Merging Kotlin output jar //src/test/kotlin/sample:number_evaluator_test (Runtime) from 1 inputs': no entry in the cache (action is new).
+Executing action 'JdepsMerge //src/test/kotlin/sample:number_evaluator_test { jdeps: 1 }': no entry in the cache (action is new).

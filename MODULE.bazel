@@ -20,6 +20,11 @@ K8S_CLIENT_VERSION = "21.0.1"
 
 # Must come before rules_kotlin due to toolchain resolution precedence.
 # See https://github.com/bazelbuild/bazel/discussions/23075.
+
+#local_repository = use_repo_rule("@bazel_tools//tools/build_defs/repo:local.bzl", "local_repository")
+#local_repository(name = "wfa_rules_kotlin_jvm", path = "/home/lceschini/tmp/rules_kotlin_jvm")
+
+
 bazel_dep(
     name = "rules_kotlin_jvm",
     version = "0.6.0",

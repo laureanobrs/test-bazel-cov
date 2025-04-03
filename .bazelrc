@@ -1,5 +1,6 @@
 # Enable Bzlmod.
 common --enable_bzlmod
+common --registry=file:///home/lceschini/tmp/registry
 common --registry=https://raw.githubusercontent.com/world-federation-of-advertisers/bazel-registry/main
 common --registry=https://bcr.bazel.build
 

@@ -407,8 +407,6 @@
     "https://raw.githubusercontent.com/world-federation-of-advertisers/bazel-registry/main/modules/rules_kotlin/2.1.0/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/world-federation-of-advertisers/bazel-registry/main/modules/rules_kotlin_jvm/0.2.0/MODULE.bazel": "0dc33937d6d7f418e1b95babcccab9df2f451400ea50ca0dc32fc6f0ea354007",
     "https://raw.githubusercontent.com/world-federation-of-advertisers/bazel-registry/main/modules/rules_kotlin_jvm/0.5.0/MODULE.bazel": "83293212c2e6e55fa27e70835ac665ccaacaced1539c447d2981eaebc0f6d9ae",
-    "https://raw.githubusercontent.com/world-federation-of-advertisers/bazel-registry/main/modules/rules_kotlin_jvm/0.6.0/MODULE.bazel": "ef5ccca16a8c060fc4e26ba30882741958a9e70f60cf8fd1a77c8fd3ffd2626d",
-    "https://raw.githubusercontent.com/world-federation-of-advertisers/bazel-registry/main/modules/rules_kotlin_jvm/0.6.0/source.json": "7033bdef8f07c1b6de1dbc7a37452874d99518c1ffdc9d69e25f8e1a8cf10261",
     "https://raw.githubusercontent.com/world-federation-of-advertisers/bazel-registry/main/modules/rules_license/0.0.3/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/world-federation-of-advertisers/bazel-registry/main/modules/rules_license/0.0.4/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/world-federation-of-advertisers/bazel-registry/main/modules/rules_license/0.0.7/MODULE.bazel": "not found",

@@ -1,0 +1,11 @@
+load("@wfa_rules_kotlin_jvm//kotlin:defs.bzl", "kt_jvm_library")
+
+package(default_visibility = [
+    "//src/test/kotlin/sample:__subpackages__",
+])
+# The Kotlin library containing your production code.
+kt_jvm_library(
+    name = "number_evaluator_lib",
+    srcs = ["NumberEvaluator.kt"],
+)
+

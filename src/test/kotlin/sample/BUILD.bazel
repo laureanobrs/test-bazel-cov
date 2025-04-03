@@ -1,0 +1,14 @@
+load("@wfa_rules_kotlin_jvm//kotlin:defs.bzl", "kt_jvm_test")
+
+# The Kotlin test target using JUnit 5.
+kt_jvm_test(
+    name = "number_evaluator_test",
+    srcs = ["NumberEvaluatorTest.kt"],
+    test_class = "sample.NumberEvaluatorTest",
+    deps = [
+        "//src/main/kotlin/sample:number_evaluator_lib",
+        "@wfa_common_jvm//imports/java/org/junit",
+        "@wfa_common_jvm//imports/kotlin/kotlin/test",
+    ],
+)
+

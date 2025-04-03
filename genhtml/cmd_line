@@ -1,1 +1,0 @@
-genhtml --branch-coverage --output genhtml /home/lceschini/.cache/bazel/_bazel_lceschini/d9ec4374d86aba0c9f5b6b0d1b470180/execroot/_main/bazel-out/_coverage/_coverage_report.dat
