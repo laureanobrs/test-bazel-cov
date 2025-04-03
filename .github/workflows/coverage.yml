@@ -30,7 +30,7 @@ jobs:
 
       - name: Run tests
         id: run-tests
-        run: bazel coverage --instrumentation_filter="//src/main/kotlin/org/...,-@.*"  --nocache_test_results --combined_report=lcov //src/test/...
+        run: bazel coverage --instrumentation_filter="//src/main/...,-@.*"  --nocache_test_results --combined_report=lcov //src/test/...
 
       - name: Bazel output path
         run: echo "BAZEL_OUTPUT_PATH=$(bazel info output_path)" >> $GITHUB_ENV
