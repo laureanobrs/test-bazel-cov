@@ -30,7 +30,19 @@ jobs:
 
       - name: Run tests
         id: run-tests
-        run: bazel coverage --instrumentation_filter="//src/main/kotlin/org/...,-@.*"  --nocache_test_results --combined_report=lcov //src/test/...
+        run: bazel coverage --instrumentation_filter="//src/main/...,-@.*"  --nocache_test_results --combined_report=lcov //src/test/...
+
+      - name: Bazel output path
+        run: echo "BAZEL_OUTPUT_PATH=$(bazel info output_path)" >> $GITHUB_ENV
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: ${{ env.BAZEL_OUTPUT_PATH }}/_coverage/_coverage_report.dat  
+
+      - name: Move coverage file
+        run: mv ${{ env.BAZEL_OUTPUT_PATH }}/_coverage/_coverage_report.dat lcov.info
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
