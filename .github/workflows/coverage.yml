@@ -3,7 +3,13 @@ name: coverage
 on:
   push:
     branches:
+      - main
       - 'releases/**'
+  pull_request:
+    branches:
+      - main
+      - 'releases/**'
+    types: [opened, synchronize, edited]
   workflow_dispatch:
 
 concurrency:
