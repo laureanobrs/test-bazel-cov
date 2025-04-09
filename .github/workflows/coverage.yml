@@ -47,11 +47,11 @@ jobs:
           name: coverage-report
           path: ${{ env.BAZEL_OUTPUT_PATH }}/_coverage/_coverage_report.dat  
 
-      - name: Move coverage file
-        run: mv ${{ env.BAZEL_OUTPUT_PATH }}/_coverage/_coverage_report.dat lcov.info
-
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
         with:
+          fail_ci_if_error: true
           token: ${{ secrets.CODECOV_TOKEN }}
           slug: laureanobrs/test-bazel-cov
+          directory: ${{ env.BAZEL_OUTPUT_PATH }}/_coverage/
+          files: _coverage_report.dat
