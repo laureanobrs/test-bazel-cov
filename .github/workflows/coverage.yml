@@ -54,4 +54,4 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           slug: laureanobrs/test-bazel-cov
           directory: ${{ env.BAZEL_OUTPUT_PATH }}/_coverage/
-          files: _coverage_report.dat
+          files: ./_coverage_report.dat
