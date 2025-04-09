@@ -1,0 +1,7 @@
+coverage:
+  status:
+    patch:
+      default:
+        informational: true
+comment:
+    layout: "condensed_header, condensed_files"
