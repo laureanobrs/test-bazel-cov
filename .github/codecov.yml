@@ -1,37 +1,10 @@
-codecov:
-  require_ci_to_pass: true
+comment: false
+
 coverage:
-  status:
-    project:
-      default:
-        target: 80
-        only_pulls: true
-        informational: true
-      cc:
-        paths:
-          - src/main/cc
-      python:
-        paths:
-          - src/main/python
-      kotlin:
-        paths:
-          - src/main/kotlin
   status:
     patch:
       default:
-        target: 80
-        only_pulls: true
         informational: true
-      cc:
-        paths:
-          - src/main/cc
-      python:
-        paths:
-          - src/main/python
-      kotlin:
-        paths:
-          - src/main/kotlin
-comment:
-  layout: " diff, flags, files"
-  behavior: default
-  hide_project_coverage: false
+    project:
+      default:
+        informational: true
