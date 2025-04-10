@@ -8,7 +8,7 @@ class NumberEvaluator {
             1 -> "A one"
             2 -> "A two"
             3 -> "A three"
-            else -> "Another number"
+            else -> "Other number"
         }
     }
 }
