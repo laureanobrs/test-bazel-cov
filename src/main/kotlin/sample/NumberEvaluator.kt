@@ -6,7 +6,9 @@ class NumberEvaluator {
         return when (number) {
             0 -> "Is zero"
             1 -> "A one"
-            else -> "Another number"
+            2 -> "A two"
+            3 -> "A three"
+            else -> "Other number"
         }
     }
 }

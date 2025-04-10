@@ -21,4 +21,9 @@ class NumberEvaluatorTest {
     evaluator.evaluate(1)
   }
 
+  @Test
+  fun `when number is one then returns 'A Two'`() {
+    evaluator.evaluate(2)
+  }
+
 }

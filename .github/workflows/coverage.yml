@@ -3,7 +3,13 @@ name: coverage
 on:
   push:
     branches:
+      - main
       - 'releases/**'
+  pull_request:
+    branches:
+      - main
+      - 'releases/**'
+    types: [opened, synchronize, edited]
   workflow_dispatch:
 
 concurrency:
@@ -30,7 +36,7 @@ jobs:
 
       - name: Run tests
         id: run-tests
-        run: bazel coverage --instrumentation_filter="//src/main/...,-@.*"  --nocache_test_results --combined_report=lcov //src/test/...
+        run: bazel coverage --instrumentation_filter="//src/main/...,-@.*"  --nocache_test_results --combined_report=lcov //...
 
       - name: Bazel output path
         run: echo "BAZEL_OUTPUT_PATH=$(bazel info output_path)" >> $GITHUB_ENV
@@ -41,11 +47,10 @@ jobs:
           name: coverage-report
           path: ${{ env.BAZEL_OUTPUT_PATH }}/_coverage/_coverage_report.dat  
 
-      - name: Move coverage file
-        run: mv ${{ env.BAZEL_OUTPUT_PATH }}/_coverage/_coverage_report.dat lcov.info
-
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
         with:
+          fail_ci_if_error: true
           token: ${{ secrets.CODECOV_TOKEN }}
           slug: laureanobrs/test-bazel-cov
+          files: ${{ env.BAZEL_OUTPUT_PATH }}/_coverage/_coverage_report.dat
