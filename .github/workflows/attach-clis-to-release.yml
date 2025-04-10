@@ -54,13 +54,13 @@ jobs:
       - name: Build CLI uber jars
         run: >
           bazel build 
-          //src/main/kotlin/sample:number_evaluator_lib_deploy.jar 
-          //src/main/kotlin/sample:number_evaluator2_lib_deploy.jar        
+          //src/main/kotlin/sample:NumberEvaluator_deploy.jar 
+          //src/main/kotlin/sample:NumberEvaluator2_deploy.jar 
 
       - name: Attach CLI uber jars to release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: >
           gh release upload "${{ github.event.release.tag_name }}" 
-          ./bazel-bin/src/main/kotlin/sample/number_evaluator_lib_deploy.jar 
-          ./bazel-bin/src/main/kotlin/sample/number_evaluator2_lib_deploy.jar 
+          ./bazel-bin/src/main/kotlin/sample/NumberEvaluator_deploy.jar 
+          ./bazel-bin/src/main/kotlin/sample/NumberEvaluator2_deploy.jar 

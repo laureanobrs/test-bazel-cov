@@ -1,3 +1,4 @@
+load("@rules_java//java:defs.bzl", "java_binary")
 load("@wfa_rules_kotlin_jvm//kotlin:defs.bzl", "kt_jvm_library")
 
 package(default_visibility = [
@@ -12,4 +13,16 @@ kt_jvm_library(
 kt_jvm_library(
     name = "number_evaluator2_lib",
     srcs = ["NumberEvaluator2.kt"],
+)
+
+java_binary(
+    name = "NumberEvaluator",
+    visibility = ["//visibility:public"],
+    runtime_deps = [":number_evaluator_lib"],
+)
+
+java_binary(
+    name = "NumberEvaluator2",
+    visibility = ["//visibility:public"],
+    runtime_deps = [":number_evaluator2_lib"],
 )
