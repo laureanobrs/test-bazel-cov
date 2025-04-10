@@ -17,7 +17,6 @@ name: Attach CLIs to release
 on:
   release:
     types: [published]
-  workflow_dispatch:
 
 jobs:
   attach-clis-to-release:
@@ -57,10 +56,12 @@ jobs:
           //src/main/kotlin/sample:NumberEvaluator_deploy.jar 
           //src/main/kotlin/sample:NumberEvaluator2_deploy.jar 
 
+      - name: Check artifacts
+        run: ls -alh ./bazel-bin/src/main/kotlin/sample/
+
       - name: Attach CLI uber jars to release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        #  TODO       if: ${{ github.event_name != 'workflow_dispatch' }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: >
           gh release upload "${{ github.event.release.tag_name }}" 
           ./bazel-bin/src/main/kotlin/sample/NumberEvaluator_deploy.jar 
