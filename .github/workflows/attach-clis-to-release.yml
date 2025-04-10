@@ -59,8 +59,10 @@ jobs:
 
       - name: Attach CLI uber jars to release
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        #  TODO       if: ${{ github.event_name != 'workflow_dispatch' }}
         run: >
           gh release upload "${{ github.event.release.tag_name }}" 
           ./bazel-bin/src/main/kotlin/sample/NumberEvaluator_deploy.jar 
           ./bazel-bin/src/main/kotlin/sample/NumberEvaluator2_deploy.jar 
+          --clobber
