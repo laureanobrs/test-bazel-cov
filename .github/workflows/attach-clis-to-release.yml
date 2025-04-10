@@ -42,11 +42,11 @@ jobs:
       #    build --remote_header=x-buildbuddy-api-key=$BUILDBUDDY_API_KEY
       #    EOF
 
-      - name: Write ~/.bazelrc
-        run: |
-          cat << EOF > ~/.bazelrc
-          common --config=ci
-          EOF
+      #- name: Write ~/.bazelrc
+      #  run: |
+      #    cat << EOF > ~/.bazelrc
+      #    common --config=ci
+      #    EOF
 
       - name: Check lockfile
         run: bazel mod deps
