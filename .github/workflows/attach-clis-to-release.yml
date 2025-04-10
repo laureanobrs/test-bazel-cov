@@ -32,7 +32,7 @@ jobs:
       - name: Set up Bazel
         uses: world-federation-of-advertisers/actions/setup-bazel@v2
 
-      - uses: ./.github/actions/free-disk-space
+      #- uses: ./.github/actions/free-disk-space
 
       - name: Write auth.bazelrc
         env:
