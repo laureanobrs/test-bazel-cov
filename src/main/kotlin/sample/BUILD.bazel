@@ -9,3 +9,7 @@ kt_jvm_library(
     srcs = ["NumberEvaluator.kt"],
 )
 
+kt_jvm_library(
+    name = "number_evaluator2_lib",
+    srcs = ["NumberEvaluator2.kt"],
+)
