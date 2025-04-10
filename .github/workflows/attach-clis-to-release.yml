@@ -17,6 +17,8 @@ name: Attach CLIs to release
 on:
   release:
     types: [published]
+    branches:
+      - main    
 
 jobs:
   attach-clis-to-release:
