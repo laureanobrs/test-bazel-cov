@@ -24,6 +24,8 @@ jobs:
   attach-clis-to-release:
     name: Attach CLIs to release
     runs-on: ubuntu-22.04
+    permissions:
+      contents: write
     env:
       CLUSTER_LOGS_PATH: cluster-logs
     steps:
