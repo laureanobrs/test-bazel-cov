@@ -14,11 +14,6 @@ kt_jvm_library(
     srcs = ["NumberEvaluator2.kt"],
 )
 
-kt_jvm_library(
-    name = "number_evaluator2_lib",
-    srcs = ["NumberEvaluator2.kt"],
-)
-
 java_binary(
     name = "NumberEvaluator",
     visibility = ["//visibility:public"],
