@@ -8,6 +8,7 @@ class NumberEvaluator {
             1 -> "A one"
             2 -> "A two"
             3 -> "A three"
+            4 -> "Just to see if there's no codecov message in PR"
             else -> "Other number"
         }
     }
